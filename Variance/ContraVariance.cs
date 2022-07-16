@@ -14,20 +14,26 @@ namespace NET6.Variance
          }
         internal class Bag<T> : IBag<T>
         {
-            public List<T> _List { get; set; } = new();
+            public List<T> list { get; set; }
             public Bag(List<T> InitializerList)
             {
-                _List = InitializerList;
+                list = InitializerList;
             }
-            public T Get(int index) => _List[index];
-            public void Add(T entity) => _List.Add(entity);
+            public T Get(int index) => list[index];
+            public void Add(T entity) => list.Add(entity);
         }
-        internal class Parent { }
-        internal class ChildA : Parent { }
+        internal class Parent 
+        {
+            public string? Name { get; set; }
+        }
+        internal class Child : Parent { }
         internal static void Run()
         {
-            IBag<ChildA> children = new Bag<Parent>(new(){ new Parent() });
-            children.Add(new ChildA ());
+            IBag<Child> children = new Bag<Parent>(new()
+            {
+                new Parent() { Name = "ContraVariance" } 
+            });
+            children.Add(new Child ());
         }
     }
 }

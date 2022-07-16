@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NET6.OOP
+namespace NET6.Polymorphism
 {
     internal class Parent
     {
