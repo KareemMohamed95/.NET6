@@ -4,6 +4,7 @@ using NET6.Dynamic_Objects;
 using NET6.Events;
 using NET6.Operator_Overloading;
 using NET6.Polymorphism;
+using NET6.Types_Comparison;
 using NET6.Variance;
 
 PolymorphismExample.Run();
@@ -19,3 +20,5 @@ AsyncronousProgrammingExample.Run();
 DynamicObjectsExample.Run();
 
 CheckedContextExample.Run();
+
+TypesComparisonExample.Run();
